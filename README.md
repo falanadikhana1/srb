@@ -5,6 +5,8 @@ with
 
 bug fixes 
 
+working batch upto 1000
+
 reanme support while saving from pvt chats
 
 save from forword restricted bot

@@ -1,18 +1,16 @@
-#from pyrogram import Client, filters  d
+
 from .. import bot as Drone
-#from .. import Bot
-#from .. import FORCESUB as fs                        d
+
+                       
 from telethon import events
 from main.__main__ import botStartTime
-###from config import Config               d
-##from pyrogram.types.messages_and_media.message import Message                d
+
 import random
 from psutil import disk_usage, cpu_percent, swap_memory, cpu_count, virtual_memory, net_io_counters, boot_time
 from time import time
 import requests
 
-##from helper_funcs.auth_user_check import AuthUserCheck                d
-##from helper_funcs.force_sub import ForceSub                      d
+
 from main.plugins.helpers import TimeFormatter,  humanbytes
 
 
@@ -21,7 +19,7 @@ from main.plugins.helpers import TimeFormatter,  humanbytes
 @Drone.on(events.NewMessage(incoming=True, func=lambda e: e.is_private, pattern='/stats'))
 async def stats(event):
     
-   # duz = event.reply("...")
+   
     currentTime = TimeFormatter((time() - botStartTime))
     osUptime = TimeFormatter((time() - boot_time()))
     total, used, free, disk= disk_usage('/')
@@ -58,7 +56,7 @@ async def stats(event):
             f'Memory Used: {mem_u}\n'
     
     await event.reply(f"{stats}")
-   #duz.edit(stats)
+   
 
 
 

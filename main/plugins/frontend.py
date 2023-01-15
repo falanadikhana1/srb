@@ -1,4 +1,4 @@
-#Github.com/Va\susen-dc,o.d-e
+#Github.com/Vasusen-code
 
 import time, os
 

@@ -3,13 +3,21 @@ srb is a https://github.com/vasusen-code/SaveRestrictedContentBot fork
 
 with 
 
-bug fixes
+bug fixes 
+
 reanme support while saving from pvt chats
+
 save from forword restricted bot
+
+
 pyrogram 2.0
+
 /stats
+
 /speedtest for admins
+
 quee supoort 
+
 for more details check the code
 
 

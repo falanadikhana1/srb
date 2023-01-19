@@ -1,5 +1,13 @@
 
+note : after 500 stars i will login using phone number support in this repo (open source)
+       i.e mutlipul users can use one instance of the bot without invite link 
+
+
 srb is a https://github.com/vasusen-code/SaveRestrictedContentBot fork
+
+
+
+
 
 with 
 

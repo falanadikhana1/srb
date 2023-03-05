@@ -73,8 +73,8 @@ async def _batch(event):
                 return await conv.send_message("Cannot wait more longer for your response!")
             try:
                 value = int(_range.text)
-                if value > 1000:
-                    return await conv.send_message("You can only get upto 1000 files in a single batch.")
+                if value > 100000:
+                    return await conv.send_message("You can only get upto 100000 files in a single batch.")
             except ValueError:
                 return await conv.send_message("Range must be an integer!")
             for i in range(value):
@@ -103,51 +103,11 @@ async def cancel(event):
     
 async def run_batch(userbot, client, sender, countdown, link):
     for i in range(len(ids)):
-        timer = 60
-        if i < 25:
-            timer = 6
-        elif i < 50 and i > 25:
-            timer = 11
-        elif i < 100 and i > 50:
-            timer = 24
-        elif i < 125 and i > 100:
-            timer = 17
-        elif i < 150 and i > 125:
-            timer = 27
-        elif i < 200 and i > 150:
-            timer = 13
-        elif i < 250 and i > 200:
-            timer = 31
-        elif i < 300 and i > 250:
-            timer = 14
-        elif i < 350 and i > 300:
-            timer = 24
-        elif i < 400 and i > 350:
-            timer = 17
-        elif i < 450 and i > 400:
-            timer = 27
-        elif i < 500 and i > 450:
-            timer = 13
-        elif i < 550 and i > 500:
-            timer = 27
-        elif i < 600:
-            timer = 11
-        elif i < 650:
-            timer = 25
-        elif i < 700:
-            timer = 17
-        elif i < 750:
-            timer = 40
-        elif i < 800: 
-            timer = 14
-        elif i < 850: 
-            timer = 17
-        elif i < 900:
-            timer = 15
-        elif i < 950: 
-            timer = 32
-        elif i < 1000: 
-            timer = 17
+        timer = 50
+        if i < 2:
+            timer = 2
+        elif i < 100000: 
+            timer = 1
         
         
         if 't.me/c/' not in link:

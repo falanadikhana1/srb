@@ -1,5 +1,5 @@
 <h1 align="center">
-  <b>Save restricted content Bot</b>
+  <b>Save restricted content Bot.</b>
 </h1> 
 
 # Variables

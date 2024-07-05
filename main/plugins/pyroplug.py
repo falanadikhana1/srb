@@ -22,6 +22,17 @@ logger = logging.getLogger(__name__)
 logging.getLogger("pyrogram").setLevel(logging.INFO)
 logging.getLogger("telethon").setLevel(logging.INFO)
 
+replacements = {
+    "Nishant Jindal":"<b>Provided by @Genetry | bit.ly/Genetry</b>",
+    "For Backup join @Team_Nothing_Official":"<b>Provided by @Genetry | bit.ly/Genetry</b>",
+    "Join @Team_Nothing12 for more":"<b>Provided by @Genetry | bit.ly/Genetry</b>",
+    "Uploader : @DaityaJi_Raaz":"<b>Provided by @Genetry | bit.ly/Genetry</b>",
+    "None_Raaz":"<b>Provided by @Genetry | bit.ly/Genetry</b>",
+    "Ananth Garg":"",
+    "Fueled By ➜ https://nishant.successcenturyworkpvtltd.in/":"<b>Provided by @Genetry | bit.ly/Genetry</b>",
+
+}
+
 def thumbnail(sender):
     return f'{sender}.jpg' if os.path.exists(f'{sender}.jpg') else None
       
@@ -173,7 +184,11 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i, file_n):
                 except Exception as e:
                     logging.info(e)
                     thumb_path = None
-                caption = msg.caption if msg.caption is not None else str(file).split("/")[-1]
+                caption = str(file)
+                if msg.caption is not None:
+                    caption = msg.caption
+                    for old, new in replacements.items():
+                        caption = caption.replace(old, new)
                 await client.send_video(
                     chat_id=sender,
                     video=path,
@@ -205,7 +220,11 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i, file_n):
                 
                 
 
-                caption = msg.caption if msg.caption is not None else str(file).split("/")[-1]
+                caption = str(file)
+                if msg.caption is not None:
+                    caption = msg.caption
+                    for old, new in replacements.items():
+                        caption = caption.replace(old, new)
                 await upm.edit("Uploading photo.")
 
                 await bot.send_file(sender, path, caption=caption)
@@ -220,7 +239,11 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i, file_n):
                     os.rename(file, path)
                     file = path
                 thumb_path=thumbnail(sender)
-                caption = msg.caption if msg.caption is not None else str(file).split("/")[-1]
+                caption = str(file)
+                if msg.caption is not None:
+                    caption = msg.caption
+                    for old, new in replacements.items():
+                        caption = caption.replace(old, new)
                 await client.send_document(
                     sender,
                     path, 

@@ -28,7 +28,7 @@ replacements = {
     "Join @Team_Nothing12 for more":"<b>Provided by @Genetry | bit.ly/Genetry</b>",
     "Uploader : @DaityaJi_Raaz":"<b>Provided by @Genetry | bit.ly/Genetry</b>",
     "None_Raaz":"<b>Provided by @Genetry | bit.ly/Genetry</b>",
-    "Ananth Garg":"",
+    "Ananth Garg":"\\n",
     "Fueled By ➜ https://nishant.successcenturyworkpvtltd.in/":"<b>Provided by @Genetry | bit.ly/Genetry</b>",
 
 }

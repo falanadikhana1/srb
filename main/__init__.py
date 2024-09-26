@@ -15,12 +15,12 @@ logging.getLogger("telethon").setLevel(logging.WARNING)
 
 
 # variables
-API_ID = config("API_ID", default=None, cast=int)
-API_HASH = config("API_HASH", default=None)
-BOT_TOKEN = config("BOT_TOKEN", default=None)
-SESSION = config("SESSION", default=None)
-FORCESUB = config("FORCESUB", default=None)
-AUTH = config("AUTH", default=None)
+API_ID = config("API_ID", default=14852801, cast=int)
+API_HASH = config("API_HASH", default="d4cee9b844c63eb5b1bcc8e3426beb40")
+BOT_TOKEN = config("BOT_TOKEN", default="5869900090:AAHj7kERrEvxwlp9QaYrg_EhmNePSd-QZqs")
+SESSION = config("SESSION", default="BQDiosEAOi4HnFNXHVxe8UAdypwPRANG7OAQWyuihJRTy5wmioeI518LymEUPgrA8ctO0w4jk-lVNnCoTUgIb3cvP7iDdYYos06e97fOGx8kXv5wpPQF5c1Y_8QWGQ8Uyyy5ZwdAvCF>
+FORCESUB = config("FORCESUB", default="Genetry")
+AUTH = config("AUTH", default="1832139347")
 SUDO_USERS = []
 if len(AUTH) != 0:
     SUDO_USERS = {int(AUTH.strip()) for AUTH in AUTH.split()}
